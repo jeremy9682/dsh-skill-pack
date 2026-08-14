@@ -1,6 +1,6 @@
 # dsh-skill-pack
 
-A shareable set of **11 workflow skills** for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`). One plugin, one `FileSystemSkillProvider`, eleven skills.
+A shareable set of **12 workflow skills** for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`). One plugin, one `FileSystemSkillProvider`, twelve skills.
 
 The pack is a single-package `dsh` plugin (the same shape as a Hermes / DSH community bundle). Installing it registers a filesystem skill provider that points at the `skills/` directory bundled inside this package — **added alongside** your own project and user skills, never replacing them.
 
@@ -10,7 +10,7 @@ The pack is a single-package `dsh` plugin (the same shape as a Hermes / DSH comm
 
 This package declares **no** `@deepseek-ai/*` dependency. Like other DSH bundles, the official packages (`@deepseek-ai/dsh-skill-filesystem`, etc.) are injected by your profile's closure at boot time, so the plugin resolves them from the profile's own `node_modules`.
 
-## The 11 skills
+## The 12 skills
 
 | Skill | What it does |
 | --- | --- |
@@ -25,6 +25,7 @@ This package declares **no** `@deepseek-ai/*` dependency. Like other DSH bundles
 | `ask-matt` | Ask which skill or flow fits your situation — a router over the shared skills set plus the user's own skills. |
 | `overnight-execution` | ⚠️ Requires prior approval. Unattended overnight coding while you sleep or step away for hours. |
 | `full-throttle` | Explicit escalation protocol (`$full-throttle` only): deeper reasoning, multi-agent/background parallelism with explicit gears, optional cross-family blind review. |
+| `skill-advisor` | Proactively suggest high-cost or permissioned skills (overnight runs, multi-session plans, shipping gates) with one-sentence reasons — but never execute without explicit approval. |
 
 ## Install
 

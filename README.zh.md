@@ -1,6 +1,6 @@
 # dsh-skill-pack
 
-一套可分享的 **11 个工作流 skills**，面向 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）。一个插件、一个 `FileSystemSkillProvider`、十一个 skill。
+一套可分享的 **12 个工作流 skills**，面向 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）。一个插件、一个 `FileSystemSkillProvider`、十二个 skill。
 
 本包是单包 `dsh` 插件（与 Hermes / DSH 社区 bundle 同一形态）。安装后注册一个文件系统 skill provider，指向包内自带的 `skills/` 目录——**叠加**在你自己的项目与用户 skills 之上，绝不替代它们。
 
@@ -10,7 +10,7 @@
 
 本包**不声明**任何 `@deepseek-ai/*` 依赖。与其他 DSH bundle 一样，官方包（`@deepseek-ai/dsh-skill-filesystem` 等）由 profile 闭包在启动时注入，因此插件从 profile 自身的 `node_modules` 解析它们。
 
-## 11 个 skill
+## 12 个 skill
 
 | Skill | 一句话介绍 |
 | --- | --- |
@@ -25,6 +25,7 @@
 | `ask-matt` | 问哪个 skill 或 flow 适合当前局面——共享 skills 集 + 用户自己 skills 之上的路由。 |
 | `overnight-execution` | ⚠️ 须先获批准。睡觉/离开数小时的无人值守通宵编码。 |
 | `full-throttle` | 显式升档协议（仅 `$full-throttle` 调用）：推理深度升档、多 agent/后台并行（须显式传档位）、可选跨家族盲审包。 |
+| `skill-advisor` | 主动建议高成本/需许可的 skill（通宵任务、跨会话规划、发布门禁），一句话说明理由——未经明确批准绝不执行。 |
 
 ## 安装
 
