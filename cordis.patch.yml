@@ -1,0 +1,6 @@
+# DSH bundle profile patch.
+# Install: dsh plugin --profile web add @jeremy9682/dsh-skill-pack
+# (or github:jeremy9682/dsh-skill-pack / file: path)
+- insert:
+    - id: dsh-skill-pack
+      name: '@jeremy9682/dsh-skill-pack'
