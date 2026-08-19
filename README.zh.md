@@ -1,6 +1,6 @@
 # dsh-skill-pack
 
-一套可分享的 **12 个工作流 skills**，面向 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）。一个插件、一个 `FileSystemSkillProvider`、十二个 skill。
+一套可分享的 **13 个工作流 skills**，面向 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）。一个插件、一个 `FileSystemSkillProvider`、十三个 skill。
 
 本包是单包 `dsh` 插件（与 Hermes / DSH 社区 bundle 同一形态）。安装后注册一个文件系统 skill provider，指向包内自带的 `skills/` 目录——**叠加**在你自己的项目与用户 skills 之上，绝不替代它们。
 
@@ -10,10 +10,11 @@
 
 本包**不声明**任何 `@deepseek-ai/*` 依赖。与其他 DSH bundle 一样，官方包（`@deepseek-ai/dsh-skill-filesystem` 等）由 profile 闭包在启动时注入，因此插件从 profile 自身的 `node_modules` 解析它们。
 
-## 12 个 skill
+## 13 个 skill
 
 | Skill | 一句话介绍 |
 | --- | --- |
+| `dsh-dispatch` | 任务类型 → 模型/effort/评审/DSH preset；产品默认 Grok 4.6。细节见 ADV 仓 `docs/model-dispatch-matrix.md`。 |
 | `dsh-mode-routing` | DSH 会话模式（agent preset）选型与路由——四套内置 preset（`standard`/`code`/`minimal`/`cordis`）+ 用户自建 preset。 |
 | `handoff` | 把当前对话压缩成交接文档，交给另一个 agent 接手。 |
 | `triage` | 让 issue 与外部 PR 走过 triage 状态机——分类、验证、质询、产出 agent-ready brief。 |

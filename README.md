@@ -1,6 +1,6 @@
 # dsh-skill-pack
 
-A shareable set of **12 workflow skills** for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`). One plugin, one `FileSystemSkillProvider`, twelve skills.
+A shareable set of **13 workflow skills** for the [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (`dsh`). One plugin, one `FileSystemSkillProvider`, thirteen skills.
 
 The pack is a single-package `dsh` plugin (the same shape as a Hermes / DSH community bundle). Installing it registers a filesystem skill provider that points at the `skills/` directory bundled inside this package — **added alongside** your own project and user skills, never replacing them.
 
@@ -10,10 +10,11 @@ The pack is a single-package `dsh` plugin (the same shape as a Hermes / DSH comm
 
 This package declares **no** `@deepseek-ai/*` dependency. Like other DSH bundles, the official packages (`@deepseek-ai/dsh-skill-filesystem`, etc.) are injected by your profile's closure at boot time, so the plugin resolves them from the profile's own `node_modules`.
 
-## The 12 skills
+## The 13 skills
 
 | Skill | What it does |
 | --- | --- |
+| `dsh-dispatch` | Task-type → model / effort / reviewer / DSH preset. Product default is Grok 4.6. Details: ADV `docs/model-dispatch-matrix.md`. |
 | `dsh-mode-routing` | DSH session mode (agent preset) selection and routing — the four built-in presets (`standard` / `code` / `minimal` / `cordis`) plus user-built presets. |
 | `handoff` | Compact the current conversation into a handoff document for another agent to pick up. |
 | `triage` | Move issues and external PRs through a triage state machine — categorise, verify, grill, and write agent-ready briefs. |
