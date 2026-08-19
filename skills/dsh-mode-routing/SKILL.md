@@ -13,6 +13,9 @@ description: >
 
 > 事实源：deepseek-harness 仓库 `packages/preset/agent-presets/README.zh.md`、
 > `apps/cli/config/agent-presets/*/`、`packages/bundle/web-app/cordis.patch.yml`。
+> 任务该派哪个 **模型/席**（Grok 4.6 vs Composer vs Codex vs Opus）见
+> `~/Projects/agent-skill-advisor-layer/docs/model-dispatch-matrix.md` 与 skill `dsh-dispatch`。
+> 本 skill 只回答「DSH 会话挂哪套 preset」。
 
 ## 一句话原则
 
